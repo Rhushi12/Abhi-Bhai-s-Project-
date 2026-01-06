@@ -1,0 +1,27 @@
+# Python / Streamlit
+__pycache__/
+*.py[cod]
+*$py.class
+.streamlit/
+
+# Excel Files (Important: Don't upload data!)
+*.xlsx
+*.xls
+*.csv
+
+# Temporary Files
+temp_input.xlsx
+temp_output.xlsx
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Virtual Env
+venv/
+env/
+.env
+
+# Clean up old stuff
+webapp/
+webapp_py/

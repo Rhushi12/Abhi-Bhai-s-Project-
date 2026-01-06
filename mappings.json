@@ -1,0 +1,127 @@
+{
+    "sales": [
+        "sales",
+        "salesrevenue",
+        "revenue",
+        "netsales"
+    ],
+    "costofsales": [
+        "expenses",
+        "costofsales",
+        "costofgoodssold",
+        "cogs"
+    ],
+    "operatingincome": [
+        "operatingprofit",
+        "operatingincome"
+    ],
+    "otherincomenormal": [
+        "otherincomenormal",
+        "otherincome"
+    ],
+    "otherincomeexceptional": [
+        "exceptionalitems",
+        "exceptional"
+    ],
+    "otherexpensesexceptionalitems": [
+        "sales",
+        "salesrevenue",
+        "revenue",
+        "netsales"
+    ],
+    "depreciation": [
+        "depreciation",
+        "depreciationamortization"
+    ],
+    "interest": [
+        "interest",
+        "interestexpense",
+        "financecharges"
+    ],
+    "tax": [
+        "taxinrcrores"
+    ],
+    "equitydividend": [
+        "dividendpayout",
+        "dividend"
+    ],
+    "networth": [
+        "networth",
+        "shareholdersequity",
+        "totalequity"
+    ],
+    "longtermborrowings": [
+        "longtermborrowings",
+        "longtermborrowing",
+        "longtermdebt"
+    ],
+    "shorttermborrowings": [
+        "shorttermborrowings",
+        "shorttermborrowing",
+        "shorttermdebt"
+    ],
+    "otherborrowingsleasereserves": [
+        "leaseliabilities",
+        "leasereserves",
+        "otherborrowings"
+    ],
+    "debt": [
+        "borrowings",
+        "totaldebt",
+        "debt"
+    ],
+    "fixedassets": [
+        "fixedassets",
+        "grossblock",
+        "propertyplantequipment"
+    ],
+    "capitalwipassets": [
+        "cwip",
+        "capitalworkinprogress",
+        "capitalwip"
+    ],
+    "currentassest": [
+        "otherassets",
+        "currentassets",
+        "totalcurrentassets"
+    ],
+    "currentliabilities": [
+        "otherliabilities",
+        "currentliabilities",
+        "totalcurrentliabilities"
+    ],
+    "investments": [
+        "investments",
+        "longtermandinvestments"
+    ],
+    "cashcashequivalent": [
+        "cashequivalents",
+        "cashandbank",
+        "cash"
+    ],
+    "currentinvestmentsmarketablesecurities": [],
+    "debtors": [
+        "tradereceivables",
+        "debtors",
+        "accountsreceivable"
+    ],
+    "inventories": [
+        "inventories",
+        "inventory",
+        "stock"
+    ],
+    "reservesandsurplusesbalance": [
+        "reserves",
+        "reservesandsurplus"
+    ],
+    "amountreceivedonissuanceofnewshares": [
+        "amountreceivedonissuanceofnewshares",
+        "issuanceofnewshares",
+        "shareissuance"
+    ],
+    "amountspendforbuybackofshares": [
+        "amountspendforbuybackofshares",
+        "buybackofshares",
+        "sharebuyback"
+    ]
+}
