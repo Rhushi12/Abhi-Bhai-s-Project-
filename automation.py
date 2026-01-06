@@ -196,9 +196,12 @@ def extract_base_data(base_df):
     matched_fields = []
     
     for factsheet_field, base_variations in FIELD_MAPPINGS.items():
+        # Normalize the field name for checking against hardcoded lists
+        norm_field = normalize_name(factsheet_field)
+        
         if not base_variations:
             # No source in base data - check which default to use
-            if factsheet_field in INPUT_PLACEHOLDER_FIELDS:
+            if norm_field in INPUT_PLACEHOLDER_FIELDS:
                 data[factsheet_field] = ['input'] * 6
             else:
                 data[factsheet_field] = [0.0] * 6
@@ -213,19 +216,19 @@ def extract_base_data(base_df):
                 matched_fields.append(f"✓ {factsheet_field} → row {row_idx}")
             except Exception as e:
                 # Use appropriate default on error
-                if factsheet_field in INPUT_PLACEHOLDER_FIELDS:
+                if norm_field in INPUT_PLACEHOLDER_FIELDS:
                     data[factsheet_field] = ['input'] * 6
                 else:
                     data[factsheet_field] = [0.0] * 6
                 matched_fields.append(f"⚠ {factsheet_field} → error: {e}")
         else:
             # Not found - use appropriate default
-            if factsheet_field in INPUT_PLACEHOLDER_FIELDS:
+            if norm_field in INPUT_PLACEHOLDER_FIELDS:
                 data[factsheet_field] = ['input'] * 6
                 matched_fields.append(f"⚠ {factsheet_field} → NOT FOUND (using 'input')")
             else:
                 data[factsheet_field] = [0.0] * 6
-                if factsheet_field not in DEFAULT_ZERO_FIELDS:
+                if norm_field not in DEFAULT_ZERO_FIELDS:
                     matched_fields.append(f"⚠ {factsheet_field} → NOT FOUND (using 0)")
     
     return data, matched_fields
@@ -303,8 +306,11 @@ def automate_transfer(file_path, output_path=None):
     
     for factsheet_field, values in data.items():
         # Find the row in Factsheet for this field
-        if factsheet_field in factsheet_row_map:
-            excel_row = factsheet_row_map[factsheet_field]
+        # Normalize key first to allow user to use "Sales (+)" etc.
+        norm_field = normalize_name(factsheet_field)
+        
+        if norm_field in factsheet_row_map:
+            excel_row = factsheet_row_map[norm_field]
         else:
             # Try partial match
             found = False
